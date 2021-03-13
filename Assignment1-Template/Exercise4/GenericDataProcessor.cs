@@ -13,17 +13,34 @@ namespace LamdaExercise
 
         public void AddDataConstraint(Predicate<T> constraint)
         {
-            throw new NotImplementedException();
+            _predicates.Add(constraint);
         }
 
         public void AddDataFiltered(List<T> data)
         {
-            throw new NotImplementedException();
+
+            foreach (T t in data)
+            {
+                bool isValid = true;
+                foreach (Predicate<T> p in _predicates)
+                {
+                    if (!p(t))
+                    {
+                        isValid = false;
+                        break;
+                    }
+                }
+                if (isValid)
+                {
+                    _dataBuffer.Add(t);
+                }
+            }
         }
 
         public G Execute<G>(Func<List<T>, G> func)
         {
-            throw new NotImplementedException();
+            return func(_dataBuffer);
         }
+
     }
 }
