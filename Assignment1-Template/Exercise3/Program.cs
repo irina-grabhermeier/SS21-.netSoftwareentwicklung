@@ -21,7 +21,7 @@ namespace Exercise_1_Exceptions
                 try
                 {
                     bool ret = parser.ParseExpression(line);
-                    Console.WriteLine("Expression is valid.");
+                    Console.WriteLine("Expression is valid...");
                 }
                 catch (Exception ex)
                 {

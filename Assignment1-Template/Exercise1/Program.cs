@@ -7,16 +7,14 @@ namespace Exercise1
         static void Main(string[] args)
         {
 
-            var isRunning = true;
             var phonebook = new Phonebook("Dornbirn");
 
-            while (isRunning)
+            while (true)
             {
                 Console.WriteLine("Write the name you are looking for: ");
                 string nameInput = Console.ReadLine();
                 if (nameInput == "quit")
                 {
-                    isRunning = false;
                     Environment.Exit(0);
                 }
                 CheckResult(phonebook.GetPhoneNumber(nameInput), phonebook, nameInput);
@@ -30,7 +28,20 @@ namespace Exercise1
             {
                 Console.WriteLine("Please enter your phone number: ");
                 var phoneInput = Console.ReadLine();
-                phonebook.AddEntry(nameInput, phoneInput);
+                if (phoneInput == "quit")
+                {
+                    Environment.Exit(0);
+                }
+                else if (phoneInput == "cancel")
+                {
+                    Console.WriteLine("Adding entry canceled.");
+                }
+                else
+                {
+                    phonebook.AddEntry(nameInput, phoneInput);
+
+                    Console.WriteLine("New entry saved.");
+                }
             }
             else
             {
