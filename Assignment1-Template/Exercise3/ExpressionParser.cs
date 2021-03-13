@@ -29,7 +29,7 @@ namespace Exercise_1_Exceptions
                 tokenStream.Peek().TokenType != EExpressionTokenType.ParenthesesOpen &&
                 tokenStream.Peek().TokenType != EExpressionTokenType.End)
             {
-                throw new Exception();
+                throw new ParseException(EExceptionReason.StartExpressionError, tokenStream.Peek().StartIndex);
             }
 
             while (tokenStream.IsFinshed == false)
@@ -44,16 +44,17 @@ namespace Exercise_1_Exceptions
                             var peeked = tokenStream.Peek();
                             if (peeked.TokenType != EExpressionTokenType.Digit && peeked.TokenType != EExpressionTokenType.ParenthesesOpen)
                             {
-                                throw new Exception();
+                                throw new ParseException(EExceptionReason.StartExpressionError, token.Data, token.StartIndex);
+
                             }
                         }
-              
+
                         break;
                     case EExpressionTokenType.ParenthesesClose: // next token must be an operator or end or paranthesis close
                         _parenthesesCounter--;
                         if (_parenthesesCounter < 0)
                         {
-                            throw new Exception(); // unmatched )
+                            throw new ParseException(EExceptionReason.UnmatchedError, token.Data, token.StartIndex); // unmatched )
                         }
                         {
                             var peeked = tokenStream.Peek();
@@ -61,7 +62,7 @@ namespace Exercise_1_Exceptions
                                 peeked.TokenType != EExpressionTokenType.Add && peeked.TokenType != EExpressionTokenType.Sub &&
                                 peeked.TokenType != EExpressionTokenType.End && peeked.TokenType != EExpressionTokenType.ParenthesesClose)
                             {
-                                throw new Exception();
+                                throw new InvalidTokenException(peeked.Data, token.StartIndex, token.Data);
                             }
                         }
                         break;
@@ -76,7 +77,7 @@ namespace Exercise_1_Exceptions
                                 peeked.TokenType != EExpressionTokenType.ParenthesesClose &&
                                 peeked.TokenType != EExpressionTokenType.End)
                             {
-                                throw new Exception();
+                                throw new InvalidTokenException(peeked.Data, token.StartIndex, token.Data);
                             }
                         }
                         break;
@@ -91,7 +92,7 @@ namespace Exercise_1_Exceptions
                                 peeked.TokenType != EExpressionTokenType.ParenthesesOpen &&
                                 peeked.TokenType != EExpressionTokenType.Digit)
                             {
-                                throw new Exception();
+                                throw new ParseException(EExceptionReason.UnmatchedError, token.Data, token.StartIndex);
                             }
                         }
                         break;
@@ -100,7 +101,7 @@ namespace Exercise_1_Exceptions
 
             if (_parenthesesCounter != 0)
             {
-                throw new Exception(); // unclosed parantheses
+                throw new ParseException(EExceptionReason.UnmatchedError, "(", input.Length); // unclosed parantheses
             }
 
             return true;

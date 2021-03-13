@@ -23,13 +23,28 @@ namespace Exercise_1_Exceptions
                     bool ret = parser.ParseExpression(line);
                     Console.WriteLine("Expression is valid...");
                 }
-                catch (Exception ex)
+                catch (ParseException ex)
                 {
-                    Console.WriteLine("Expression is invalid.");
+                    if (ex.Reason == EExceptionReason.UnmatchedError)
+                    {
+                        Console.WriteLine($"Parse error at position {ex.Position}: Unmatched \"{ex.Token}\" in expression.");
+                    }
+                    else if (ex.Reason == EExceptionReason.StartExpressionError)
+                    {
+                        Console.WriteLine($"Parse error at position {ex.Position}: An expression must start with a digit or a \"(\".");
+                    }
                 }
-               
-                
-               
+                catch (InvalidTokenException ex)
+                {
+                    var message = $"Unexpected input after \"{ex.TokenData}\" at position {ex.Position}: "
+                        + $"expected: \")\",\"+\",\"-\",\"*\",\"/\" or end of expression, but found \"{ex.PeekedData}\".";
+                    Console.WriteLine(message);
+
+                }
+                catch (TokenizationException ex)
+                {
+                    Console.WriteLine($"Error at position {ex.CharacterIndex}: \"{ex.Input}\" is not a valid input.");
+                }
             }
         }
     }

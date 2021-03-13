@@ -79,7 +79,7 @@ namespace Exercise_1_Exceptions
                     return ExpressionToken.CreateToken(_currentIndex - 1, "/", EExpressionTokenType.Div);
             }
 
-            throw new Exception();
+            throw new TokenizationException(cur.ToString(), _currentIndex);
         }
 
         private ExpressionToken tokenizeNumber(char digit)

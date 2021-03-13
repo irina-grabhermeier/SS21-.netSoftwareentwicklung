@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EExceptionReason.cs" />
     <Compile Include="ExpressionParser.cs" />
     <Compile Include="ExpressionToken.cs" />
     <Compile Include="ExpressionTokenStream.cs" />
