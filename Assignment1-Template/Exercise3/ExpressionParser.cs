@@ -12,7 +12,7 @@ namespace Exercise_1_Exceptions
     public class ExpressionParser
     {
         private ITokenizer<ExpressionToken> _tokenizer;
-        private int _parenthesesCounter = 0;
+        // private int _parenthesesCounter = 0; // When in the while(true) main loop, the paranthesesCounter doesn't reset for new checks.
 
         public ExpressionParser(ITokenizer<ExpressionToken> tokenizer)
         {
@@ -32,6 +32,7 @@ namespace Exercise_1_Exceptions
                 throw new ParseException(EExceptionReason.StartExpressionError, tokenStream.Peek().StartIndex);
             }
 
+            int parenthesesCounter = 0;
             while (tokenStream.IsFinshed == false)
             {
                 var token = tokenStream.Next();
@@ -39,7 +40,7 @@ namespace Exercise_1_Exceptions
                 {
 
                     case EExpressionTokenType.ParenthesesOpen: // next token must be a digit or another paranthesis open
-                        _parenthesesCounter++;
+                        parenthesesCounter++;
                         {
                             var peeked = tokenStream.Peek();
                             if (peeked.TokenType != EExpressionTokenType.Digit && peeked.TokenType != EExpressionTokenType.ParenthesesOpen)
@@ -51,8 +52,8 @@ namespace Exercise_1_Exceptions
 
                         break;
                     case EExpressionTokenType.ParenthesesClose: // next token must be an operator or end or paranthesis close
-                        _parenthesesCounter--;
-                        if (_parenthesesCounter < 0)
+                        parenthesesCounter--;
+                        if (parenthesesCounter < 0)
                         {
                             throw new ParseException(EExceptionReason.UnmatchedError, token.Data, token.StartIndex); // unmatched )
                         }
@@ -99,7 +100,7 @@ namespace Exercise_1_Exceptions
                 }
             }
 
-            if (_parenthesesCounter != 0)
+            if (parenthesesCounter != 0)
             {
                 throw new ParseException(EExceptionReason.UnmatchedError, "(", input.Length); // unclosed parantheses
             }

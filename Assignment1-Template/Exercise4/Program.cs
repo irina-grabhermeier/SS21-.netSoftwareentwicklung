@@ -43,9 +43,9 @@ namespace LamdaExercise
 
             var countOfFilteredListFemale = femaleVerifier.Execute<int>(data => data.Count);
 
-            Console.WriteLine($"Of these 10000 people, {countOfFilteredListFemale} are females between the age of 30 and 50 are unhealthy.");
-            // Healthy males in the age group 75 - 90.
+            Console.WriteLine($"Of these 10000 people, {countOfFilteredListFemale} are females (with valid data) between the age of 30 and 50 are unhealthy.");
 
+            // Healthy males in the age group 75 - 90.
 
             var maleVerifier = new GenericDataProcessor<DataObject>();
             maleVerifier.AddDataConstraint(new Predicate<DataObject>(d => d.Gender == EGender.Male));
@@ -57,7 +57,7 @@ namespace LamdaExercise
 
             var countOfFilteredListMale = maleVerifier.Execute<int>(data => data.Count);
 
-            Console.WriteLine($"Of these 10000 people, {countOfFilteredListMale} are males between the age of 75 and 90 are healthy.");
+            Console.WriteLine($"Of these 10000 people, {countOfFilteredListMale} are males (with valid data) between the age of 75 and 90 are healthy.");
             Console.ReadKey();
 
         }
