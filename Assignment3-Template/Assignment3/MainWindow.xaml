@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-        <Menu x:Name="menubar">Menubar</Menu>
+        <Menu x:Name="menubar" Height="25">
+            <Menu.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#C0392B" Offset="0"/>
+                    <GradientStop Color="#F2D7D5" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="Menubar" />
+        </Menu>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
             <Grid x:Name="chessboard" HorizontalAlignment="Left">
                 <Grid.ColumnDefinitions>
