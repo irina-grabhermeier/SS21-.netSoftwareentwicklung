@@ -8,6 +8,9 @@ namespace MocksExercise
 {
     public class CommandContainer
     {
+        /// <summary>
+        /// Florian Eckhart, Irina Grabher Meier
+        /// </summary>
         private List<ICommand> _commands = new List<ICommand>();
 
         public CommandContainer(IInputReader inputReader)
@@ -17,6 +20,10 @@ namespace MocksExercise
 
         public void AddCommand(ICommand command)
         {
+            if (command == null)
+            {
+                throw new ArgumentNullException("Command cannot be null.");
+            }
             _commands.Add(command);
         }
 
