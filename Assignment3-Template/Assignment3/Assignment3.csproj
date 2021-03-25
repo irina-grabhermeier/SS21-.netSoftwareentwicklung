@@ -6,4 +6,65 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="recources\bishop_black.png" />
+    <None Remove="recources\bishop_white.png" />
+    <None Remove="recources\king_black.png" />
+    <None Remove="recources\king_white.png" />
+    <None Remove="recources\knight_black.png" />
+    <None Remove="recources\knight_white.png" />
+    <None Remove="recources\pawn_black.png" />
+    <None Remove="recources\pawn_white.png" />
+    <None Remove="recources\queen_black.png" />
+    <None Remove="recources\queen_white.png" />
+    <None Remove="recources\rook_black.png" />
+    <None Remove="recources\rook_white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="recources\Dictionary1.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="recources\bishop_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\bishop_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\Dictionary1.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\king_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\king_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\knight_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\knight_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\pawn_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\pawn_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\queen_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\queen_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\rook_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="recources\rook_white.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
