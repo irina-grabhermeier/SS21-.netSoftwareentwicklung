@@ -5,23 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Chess Game" Height="700" Width="900">
     <Window.Resources>
-
+        <LinearGradientBrush x:Key="LinearGardientBrushBrown" >
+            <GradientStop Color="#C0392B" Offset="0"/>
+            <GradientStop Color="#F2D7D5" Offset="0.9"/>
+        </LinearGradientBrush>
+        <Style TargetType="MenuItem">
+            <Setter Property="MenuItem.FontSize" Value="20"/>
+            <Setter Property="MenuItem.FontWeight" Value="Bold"/>
+            <Setter Property="MenuItem.Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Button.Margin" Value="10"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="Wheat"/>
+        </Style>
     </Window.Resources>
-    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-        <Menu x:Name="menubar" Height="25">
-            <Menu.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="#C0392B" Offset="0"/>
-                    <GradientStop Color="#F2D7D5" Offset="0.9"/>
-                </LinearGradientBrush>
-            </Menu.Background>
-            <MenuItem Header="Menubar" />
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" Height="Auto" Width="Auto" >
+        <Menu x:Name="menubar" Height="Auto" Background="{StaticResource LinearGardientBrushBrown}">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Help">
+                <MenuItem Header="Example1" Foreground="Black"/>
+                <MenuItem Header="Example2" Foreground="Black"/>
+            </MenuItem>
         </Menu>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-            <local:Chessboard HorizontalAlignment="Left"/>
-            <Grid x:Name="gamesettings" HorizontalAlignment="Right"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="Auto" Width="Auto" >
+            <local:Chessboard HorizontalAlignment="Left" Margin="5"/>
+            <Grid x:Name="gamesettings" HorizontalAlignment="Right" Height="Auto" Width="Auto">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                    <Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./resources/pawn_black.png" MaxHeight="20"/>
+                            <TextBlock Margin="5,0">Surrender Game</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./resources/pawn_white.png" MaxHeight="20"/>
+                            <TextBlock Margin="5,0">Restart Game</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
         </StackPanel>
     </StackPanel>
 </Window>
