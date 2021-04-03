@@ -7,62 +7,62 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="resources\bishop_black.png" />
-    <None Remove="resources\bishop_white.png" />
-    <None Remove="resources\king_black.png" />
-    <None Remove="resources\king_white.png" />
-    <None Remove="resources\knight_black.png" />
-    <None Remove="resources\knight_white.png" />
-    <None Remove="resources\pawn_black.png" />
-    <None Remove="resources\pawn_white.png" />
-    <None Remove="resources\queen_black.png" />
-    <None Remove="resources\queen_white.png" />
-    <None Remove="resources\rook_black.png" />
-    <None Remove="resources\rook_white.png" />
+    <None Remove="Resources\bishop_black.png" />
+    <None Remove="Resources\bishop_white.png" />
+    <None Remove="Resources\king_black.png" />
+    <None Remove="Resources\king_white.png" />
+    <None Remove="Resources\knight_black.png" />
+    <None Remove="Resources\knight_white.png" />
+    <None Remove="Resources\pawn_black.png" />
+    <None Remove="Resources\pawn_white.png" />
+    <None Remove="Resources\queen_black.png" />
+    <None Remove="Resources\queen_white.png" />
+    <None Remove="Resources\rook_black.png" />
+    <None Remove="Resources\rook_white.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="resources\Dictionary1.xaml" />
+    <Page Remove="Resources\Dictionary1.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="resources\bishop_black.png">
+    <Content Include="Resources\bishop_black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\bishop_white.png">
+    <Content Include="Resources\bishop_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\Dictionary1.xaml">
+    <Content Include="Resources\Dictionary1.xaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\king_black.png">
+    <Content Include="Resources\king_black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\king_white.png">
+    <Content Include="Resources\king_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\knight_black.png">
+    <Content Include="Resources\knight_black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\knight_white.png">
+    <Content Include="Resources\knight_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\pawn_black.png">
+    <Content Include="Resources\pawn_black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\pawn_white.png">
+    <Content Include="Resources\pawn_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\queen_black.png">
+    <Content Include="Resources\queen_black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\queen_white.png">
+    <Content Include="Resources\queen_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\rook_black.png">
+    <Content Include="Resources\rook_black.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="resources\rook_white.png">
+    <Content Include="Resources\rook_white.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

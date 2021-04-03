@@ -1,0 +1,320 @@
+﻿<!-- Florian Eckhart, Maximilian Kofler -->
+<UserControl x:Class="Chess_Game.ChessBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Chess_Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="450">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml" />
+                <ResourceDictionary>
+                    <Style x:Key="ChessBoard" TargetType="Grid">
+                        <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" />
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border BorderBrush="Black" BorderThickness="3">
+        <Grid Background="Aqua" Style="{StaticResource ChessBoard}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!-- Row 0 -->
+            <Grid Grid.Row="0" Grid.Column="0">
+                <local:ChessSquare DataContext="{Binding Cells[0][0]}" Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource rookBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource knightBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource bishopBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource queenBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource kingBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource bishopBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource knightBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource rookBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+
+            <!-- Row 1 -->
+            <Grid Grid.Row="1" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnBlack}"></Image>
+                </local:ChessSquare>
+            </Grid>
+
+            <!-- Row 2 -->
+            <Grid Grid.Row="2" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+
+            <!-- Row 3 -->
+            <Grid Grid.Row="3" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            
+            <!-- Row 4 -->
+            <Grid Grid.Row="4" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+
+            <!-- Row 5 -->
+            <Grid Grid.Row="5" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}"></local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="5" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}"></local:ChessSquare>
+            </Grid>
+
+            <!-- Row 6 -->
+            <Grid Grid.Row="6" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="6" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource pawnWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+
+            <!-- Row 7 -->
+            <Grid Grid.Row="7" Grid.Column="0">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource rookWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="1">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource knightWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="2">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource bishopWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="3">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource kingWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="4">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource queenWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="5">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource bishopWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="6">
+                <local:ChessSquare Background="{StaticResource ChessBoardDarkSquareColor}">
+                    <Image Source="{StaticResource knightWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            <Grid Grid.Row="7" Grid.Column="7">
+                <local:ChessSquare Background="{StaticResource ChessBoardBrightSquareColor}">
+                    <Image Source="{StaticResource rookWhite}"></Image>
+                </local:ChessSquare>
+            </Grid>
+            
+        </Grid>
+    </Border>
+</UserControl>
