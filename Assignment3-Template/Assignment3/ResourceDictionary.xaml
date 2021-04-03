@@ -1,17 +1,17 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Image x:Key="RookBlack" Source="./../Resources/rook_black.png"/>
-    <Image x:Key="RookWhite" Source="./../Resources/rook_white.png"/>
-    <Image x:Key="KnightBlack" Source="./../Resources/knight_black.png"/>
-    <Image x:Key="KnightWhite" Source="./../Resources/knight_white.png"/>
-    <Image x:Key="BishopBlack" Source="./../Resources/bishop_black.png"/>
-    <Image x:Key="BishopWhite" Source="./../Resources/bishop_white.png"/>
-    <Image x:Key="QueenBlack" Source="./../Resources/queen_black.png"/>
-    <Image x:Key="QueenWhite" Source="./../Resources/queen_white.png"/>
-    <Image x:Key="KingBlack" Source="./../Resources/king_black.png"/>
-    <Image x:Key="KingWhite" Source="./../Resources/king_white.png"/>
-    <Image x:Key="PawnBlack" Source="./../Resources/pawn_black.png"/>
-    <Image x:Key="PawnWhite" Source="./../Resources/pawn_white.png"/>
+    <ImageSource x:Key="RookBlack">./Resources/rook_black.png</ImageSource>
+    <ImageSource x:Key="RookWhite">./Resources/rook_white.png</ImageSource>
+    <ImageSource x:Key="KnightBlack">./Resources/knight_black.png</ImageSource>
+    <ImageSource x:Key="KnightWhite">./Resources/knight_white.png</ImageSource>
+    <ImageSource x:Key="BishopBlack">./Resources/bishop_black.png</ImageSource>
+    <ImageSource x:Key="BishopWhite">./Resources/bishop_white.png</ImageSource>
+    <ImageSource x:Key="QueenBlack">./Resources/queen_black.png</ImageSource>
+    <ImageSource x:Key="QueenWhite">./Resources/queen_white.png</ImageSource>
+    <ImageSource x:Key="KingBlack">./Resources/king_black.png</ImageSource>
+    <ImageSource x:Key="KingWhite">./Resources/king_white.png</ImageSource>
+    <ImageSource x:Key="PawnBlack">./Resources/pawn_black.png</ImageSource>
+    <ImageSource x:Key="PawnWhite">./Resources/pawn_white.png</ImageSource>
 
 </ResourceDictionary>

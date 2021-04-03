@@ -18,7 +18,7 @@ namespace Chess_Game
         public ChessPieceTypeToImageConverter()
         {
             resourceDictionary = new ResourceDictionary();
-            resourceDictionary.Source = new Uri("Resources.xaml", UriKind.RelativeOrAbsolute);
+            resourceDictionary.Source = new Uri("ResourceDictionary.xaml", UriKind.RelativeOrAbsolute);
         }
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {

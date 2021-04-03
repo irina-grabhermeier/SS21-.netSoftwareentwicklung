@@ -19,7 +19,7 @@ namespace Chess_Game
         {
             EFieldType fieldType = (EFieldType)value;
             var resourceDictionary = new ResourceDictionary();
-            resourceDictionary.Source = new Uri("Resources.xaml", UriKind.RelativeOrAbsolute);
+            resourceDictionary.Source = new Uri("ResourceDictionary.xaml", UriKind.RelativeOrAbsolute);
             switch (fieldType)
             {
                 case EFieldType.Dark:

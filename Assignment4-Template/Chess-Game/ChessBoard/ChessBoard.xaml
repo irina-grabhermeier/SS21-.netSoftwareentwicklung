@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../Resources.xaml" />
+                <ResourceDictionary Source="../ResourceDictionary.xaml" />
                 <ResourceDictionary>
                     <Style x:Key="ChessBoard" TargetType="Grid">
                         <Setter Property="Width" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" />
@@ -72,7 +72,7 @@
             <local:ChessSquare Grid.Row="2" Grid.Column="5" DataContext="{Binding Cells[2][5]}" />
             <local:ChessSquare Grid.Row="2" Grid.Column="6" DataContext="{Binding Cells[2][6]}" />
             <local:ChessSquare Grid.Row="2" Grid.Column="7" DataContext="{Binding Cells[2][7]}" />
-            
+
             <!-- Row 3 -->
             <local:ChessSquare Grid.Row="3" Grid.Column="0" DataContext="{Binding Cells[3][0]}" />
             <local:ChessSquare Grid.Row="3" Grid.Column="1" DataContext="{Binding Cells[3][1]}" />
@@ -112,7 +112,7 @@
             <local:ChessSquare Grid.Row="6" Grid.Column="5" DataContext="{Binding Cells[6][5]}" />
             <local:ChessSquare Grid.Row="6" Grid.Column="6" DataContext="{Binding Cells[6][6]}" />
             <local:ChessSquare Grid.Row="6" Grid.Column="7" DataContext="{Binding Cells[6][7]}" />
-            
+
             <!-- Row 7 -->
             <local:ChessSquare Grid.Row="7" Grid.Column="0" DataContext="{Binding Cells[7][0]}" />
             <local:ChessSquare Grid.Row="7" Grid.Column="1" DataContext="{Binding Cells[7][1]}" />
@@ -122,7 +122,7 @@
             <local:ChessSquare Grid.Row="7" Grid.Column="5" DataContext="{Binding Cells[7][5]}" />
             <local:ChessSquare Grid.Row="7" Grid.Column="6" DataContext="{Binding Cells[7][6]}" />
             <local:ChessSquare Grid.Row="7" Grid.Column="7" DataContext="{Binding Cells[7][7]}" />
-            
+
         </Grid>
     </Border>
 </UserControl>

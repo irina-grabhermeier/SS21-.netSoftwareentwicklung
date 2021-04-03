@@ -6,6 +6,10 @@
              xmlns:local="clr-namespace:Assignment3"
              mc:Ignorable="d" 
              d:DesignHeight="NaN" d:DesignWidth="NaN">
+    <UserControl.Resources>
+        <ResourceDictionary Source="./../ResourceDictionary.xaml" />
+    </UserControl.Resources>
+
     <Border BorderBrush="Brown" BorderThickness="4" Width="Auto" Height="Auto">
         <Grid Width="Auto" Height="Auto">
             <Grid.ColumnDefinitions>
@@ -32,97 +36,97 @@
 
             <Border Grid.Column="0" Grid.Row="0" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/rook_black.png"/>
+                    <Image Source="{StaticResource RookBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="1" Grid.Row="0">
                 <Viewbox>
-                    <Image Source="./../Resources/knight_black.png"/>
+                    <Image Source="{StaticResource KnightBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="2" Grid.Row="0" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/bishop_black.png"/>
+                    <Image Source="{StaticResource BishopBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="3" Grid.Row="0">
                 <Viewbox>
-                    <Image Source="./../Resources/king_black.png"/>
+                    <Image Source="{StaticResource KingBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="4" Grid.Row="0" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/queen_black.png"/>
+                    <Image Source="{StaticResource QueenBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="5" Grid.Row="0">
                 <Viewbox>
-                    <Image Source="./../Resources/bishop_black.png"/>
+                    <Image Source="{StaticResource BishopBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="6" Grid.Row="0" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/knight_black.png"/>
+                    <Image Source="{StaticResource KnightBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="7" Grid.Row="0">
                 <Viewbox>
-                    <Image Source="./../Resources/rook_black.png"/>
+                    <Image Source="{StaticResource RookBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="0" Grid.Row="1">
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="1" Grid.Row="1" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="2" Grid.Row="1">
                 <Viewbox>
-                    <Image Source="./../../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="3" Grid.Row="1" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="4" Grid.Row="1">
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="5" Grid.Row="1" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="6" Grid.Row="1">
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="7" Grid.Row="1" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_black.png"/>
+                    <Image Source="{StaticResource PawnBlack}"/>
                 </Viewbox>
             </Border>
 
@@ -148,97 +152,97 @@
 
             <Border Grid.Column="0" Grid.Row="6" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="1" Grid.Row="6" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="2" Grid.Row="6" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="3" Grid.Row="6" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="4" Grid.Row="6" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="5" Grid.Row="6" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="6" Grid.Row="6" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="7" Grid.Row="6" >
                 <Viewbox>
-                    <Image Source="./../Resources/pawn_white.png"/>
+                    <Image Source="{StaticResource PawnWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="0" Grid.Row="7">
                 <Viewbox>
-                    <Image Source="./../Resources/rook_white.png"/>
+                    <Image Source="{StaticResource RookWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="1" Grid.Row="7" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/knight_white.png"/>
+                    <Image Source="{StaticResource KnightWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="2" Grid.Row="7">
                 <Viewbox>
-                    <Image Source="./../Resources/bishop_white.png"/>
+                    <Image Source="{StaticResource BishopWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="3" Grid.Row="7" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/king_white.png"/>
+                    <Image Source="{StaticResource KingWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="4" Grid.Row="7">
                 <Viewbox>
-                    <Image Source="./../Resources/queen_white.png"/>
+                    <Image Source="{StaticResource QueenWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="5" Grid.Row="7" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/bishop_white.png"/>
+                    <Image Source="{StaticResource BishopWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="6" Grid.Row="7">
                 <Viewbox>
-                    <Image Source="./../Resources/knight_white.png"/>
+                    <Image Source="{StaticResource KnightWhite}"/>
                 </Viewbox>
             </Border>
 
             <Border Grid.Column="7" Grid.Row="7" Background="Brown" >
                 <Viewbox>
-                    <Image Source="./../Resources/rook_white.png"/>
+                    <Image Source="{StaticResource RookWhite}"/>
                 </Viewbox>
             </Border>
         </Grid>
