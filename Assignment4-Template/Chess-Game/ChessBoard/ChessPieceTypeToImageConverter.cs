@@ -31,7 +31,7 @@ namespace Chess_Game
             }
 
             string resourceKey = "";
-            resourceKey += type.ToString().ToLower();
+            resourceKey += type.ToString();
             resourceKey += color.ToString();
             return resourceDictionary[resourceKey];
         }

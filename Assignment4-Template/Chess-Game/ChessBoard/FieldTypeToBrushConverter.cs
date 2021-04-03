@@ -13,7 +13,7 @@ namespace Chess_Game
     /// <summary>
     /// Florian Eckhart, Irina Grabher Meier, Dennis Krobath
     /// </summary>
-    class EFieldTypeToBrushConverter : IValueConverter
+    class FieldTypeToBrushConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

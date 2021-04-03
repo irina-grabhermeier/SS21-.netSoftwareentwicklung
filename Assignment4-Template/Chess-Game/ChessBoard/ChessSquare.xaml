@@ -8,11 +8,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="100">
     <UserControl.Resources>
-        <local:EFieldTypeToBrushConverter x:Key="EFieldTypeToBrushConverter" />
+        <local:FieldTypeToBrushConverter x:Key="FieldTypeToBrushConverter" />
         <local:ChessPieceTypeToImageConverter x:Key="ChessPieceTypeToImageConverter" />
     </UserControl.Resources>
 
-    <Grid Background="{Binding FieldType, Converter={StaticResource EFieldTypeToBrushConverter}}">
+    <Grid Background="{Binding FieldType, Converter={StaticResource FieldTypeToBrushConverter}}">
         <Viewbox>
             <Image>
                 <Image.Source>

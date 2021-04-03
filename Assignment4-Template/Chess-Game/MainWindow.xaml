@@ -44,13 +44,13 @@
                 <StackPanel VerticalAlignment="Bottom">
                     <Button Style="{StaticResource GameButton}">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="{StaticResource knightBlack}" Width="20" />
+                            <Image Source="{StaticResource KnightBlack}" Width="20" />
                             <Label>Surrender Game</Label>
                         </StackPanel>
                     </Button>
                     <Button Style="{StaticResource GameButton}" Margin="20 10 0 20">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="{StaticResource knightWhite}" Width="20" />
+                            <Image Source="{StaticResource KnightWhite}" Width="20" />
                             <Label>Restart Game</Label>
                         </StackPanel>
                         </Button>

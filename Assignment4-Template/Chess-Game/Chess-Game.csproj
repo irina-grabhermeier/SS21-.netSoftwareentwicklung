@@ -80,7 +80,7 @@
     <Compile Include="ChessBoard\ChessSquare.xaml.cs">
       <DependentUpon>ChessSquare.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChessBoard\EFieldTypeToBrushConverter.cs" />
+    <Compile Include="ChessBoard\FieldTypeToBrushConverter.cs" />
     <Compile Include="ChessBoard\EPieceColor.cs" />
     <Compile Include="ChessBoard\EPieceType.cs" />
     <Compile Include="ChessBoard\ICellStatusViewModel.cs" />
