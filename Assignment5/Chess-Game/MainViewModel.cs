@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 using System.Windows;
 using Exercise_2.Annotations;
 
+/*
+ * Team: Richard Leierer and Irina Grabher Meier
+*/
+
 namespace Exercise_2
 {
     public class MainViewModel : INotifyPropertyChanged
